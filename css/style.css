@@ -50,8 +50,8 @@ body.lock {
     margin-left: auto;
     position: relative;
     z-index: 10;
-    background: #2e1a21;
-    box-shadow: -24px 0 70px rgba(0, 0, 0, 0.55);
+    background: #faf6ee;
+    box-shadow: -24px 0 70px rgba(63, 52, 42, 0.28);
   }
   #cover {
     left: auto !important;
@@ -61,14 +61,14 @@ body.lock {
     left: calc(100% - var(--w) / 2) !important;
   }
   body {
-    background: #2e1a21;
+    background: #faf6ee;
   }
 }
 .sl {
   transition: opacity 1.2s ease;
 }
 .ph {
-  background: linear-gradient(135deg, #6b3f4e, #472830);
+  background: linear-gradient(135deg, #efe5d2, #e0d2b6);
 }
 @keyframes zm {
   from {
@@ -233,5 +233,5 @@ body.lock {
 }
 .gal-th.is-on {
   opacity: 1;
-  outline-color: #fff;
+  outline-color: #85704f;
 }

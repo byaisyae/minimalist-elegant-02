@@ -38,7 +38,7 @@ const lbShow = (i, d = 0, first) => {
   $("#lbd").innerHTML = a
     .map(
       (_, k) =>
-        `<button data-i="${k}" aria-label="Foto ${k + 1}" class="ld h-2 rounded-full transition-all ${k == li ? "w-6 bg-white" : "w-2 bg-white/40"}"></button>`,
+        `<button data-i="${k}" aria-label="Foto ${k + 1}" class="ld h-2 rounded-full transition-all ${k == li ? "w-6 bg-ac" : "w-2 bg-ac/30"}"></button>`,
     )
     .join("");
 };

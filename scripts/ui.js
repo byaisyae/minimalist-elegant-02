@@ -5,7 +5,9 @@ scrollTo(0, 0);
 $("#cvbg").style.backgroundImage = `url(${C.bg.cover})`;
 document.title = C.site.title;
 document.querySelectorAll("[data-names]").forEach((el) => (el.textContent = `${B.nick} & ${G.nick}`));
-$("#coverDate").textContent = fmt;
+$("#coverDate").textContent = d0
+  .toLocaleDateString("id-ID", { day: "2-digit", month: "2-digit", year: "numeric" })
+  .replaceAll("/", " . ");
 $("#sideDate").textContent = fmt.toUpperCase();
 const sl = [...document.querySelectorAll(".sl")];
 sl.forEach(
@@ -50,7 +52,7 @@ $("#nav").innerHTML = [
   .filter(([i]) => document.getElementById(i))
   .map(
     ([i, t]) =>
-      `<a href="#${i}" class="inline-block px-3 py-1.5 rounded-full hover:bg-sk-300 hover:text-n9 transition">${t}</a>`,
+      `<a href="#${i}" class="inline-block px-3 py-1.5 rounded-full hover:bg-ac hover:text-white transition">${t}</a>`,
   )
   .join("");
 const a = $("#bgm");
@@ -89,7 +91,7 @@ const tick = () => {
   $("#cd").innerHTML = v
     .map(
       ([l, n]) =>
-        `<div class="w-[4.3rem] sm:w-24 lg:w-[4.3rem] py-3 sm:py-5 lg:py-3 rounded-2xl border border-sk-300/30 bg-n9/60 backdrop-blur-sm"><div class="font-serif text-2xl sm:text-4xl lg:text-2xl text-white">${String(n | 0).padStart(2, "0")}</div><div class="text-[9px] sm:text-[10px] tracking-widest text-sk-300">${l.toUpperCase()}</div></div>`,
+        `<div class="w-[4.3rem] sm:w-24 lg:w-[4.3rem] py-3 sm:py-5 lg:py-3 rounded-2xl border border-ac/30 bg-white/70 backdrop-blur-sm"><div class="font-serif text-2xl sm:text-4xl lg:text-2xl text-ink-900">${String(n | 0).padStart(2, "0")}</div><div class="text-[9px] sm:text-[10px] tracking-widest text-ink-500">${l.toUpperCase()}</div></div>`,
     )
     .join("");
 };

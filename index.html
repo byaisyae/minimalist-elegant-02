@@ -7,8 +7,8 @@
       content="width=device-width,initial-scale=1,viewport-fit=cover"
     />
     <!-- ====== UBAH PER PESANAN: judul, deskripsi, url & gambar pratinjau link (dibaca WhatsApp/medsos, tidak bisa dari config.js) ====== -->
-    <title>The Wedding of Icha &amp; Ridwan</title>
-    <meta property="og:title" content="The Wedding of Icha &amp; Ridwan" />
+    <title>The Wedding of Nadia &amp; Raka</title>
+    <meta property="og:title" content="The Wedding of Nadia &amp; Raka" />
     <meta
       property="og:description"
       content="Kami mengundang Anda untuk hadir di hari bahagia kami. Sabtu, 12 Desember 2026."
@@ -16,7 +16,7 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://byaisyae.github.io/wedding-icha-ridwan/"
+      content="https://example.com/wedding-nadia-raka/"
     />
     <meta
       property="og:image"
@@ -31,37 +31,42 @@
     <script src="scripts/tailwind.config.js"></script>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body class="lock bg-n9 text-sk-200 font-sans antialiased overflow-x-hidden">
+  <body class="lock bg-cream-100 text-ink-700 font-sans antialiased overflow-x-hidden">
     <section
       id="cover"
-      class="fixed inset-0 z-[60] grid place-items-center text-center px-6 overflow-hidden bg-n8"
+      class="fixed inset-0 z-[60] grid place-items-center text-center px-6 overflow-hidden bg-cream-200"
     >
       <div id="cvbg" class="absolute inset-0 bg kb"></div>
       <div
-        class="absolute inset-0 bg-gradient-to-b from-n9/80 via-n8/60 to-n9/90"
+        class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-cream-100 via-cream-100/70 to-transparent"
       ></div>
       <div
-        class="absolute inset-4 sm:inset-8 border border-sk-300/40 rounded-[2rem] pointer-events-none"
+        class="absolute inset-4 sm:inset-8 border border-white/50 rounded-[2rem] pointer-events-none"
       ></div>
       <div class="relative">
-        <p class="tracking-[.45em] text-[11px] sm:text-xs text-sk-300">
-          THE WEDDING OF
+        <p
+          class="font-sans uppercase tracking-[.3em] text-[11px] sm:text-xs text-white [text-shadow:0_2px_14px_rgba(0,0,0,.45)]"
+        >
+          THE BEGINNING OF FOREVER
         </p>
         <h1
           data-names
-          class="font-script text-6xl sm:text-8xl lg:text-7xl text-white my-4 drop-shadow-lg"
+          class="font-serif font-normal text-5xl sm:text-7xl lg:text-6xl text-white my-5 [text-shadow:0_2px_14px_rgba(0,0,0,.45)]"
         >
         </h1>
-        <p id="coverDate" class="font-serif tracking-widest text-sk-300"></p>
+        <p
+          id="coverDate"
+          class="font-sans uppercase tracking-[.3em] text-[11px] sm:text-xs text-white [text-shadow:0_2px_14px_rgba(0,0,0,.45)]"
+        ></p>
         <div
-          class="mt-10 mx-auto max-w-xs rounded-2xl bg-n9/50 backdrop-blur-sm border border-sk-300/20 py-5 px-4"
+          class="mt-10 mx-auto max-w-xs rounded-2xl bg-cream-50/70 backdrop-blur-sm border border-ac/20 py-5 px-4"
         >
-          <p class="text-xs text-sk-300">Kepada Yth. Bapak/Ibu/Saudara/i</p>
-          <p id="guest" class="font-serif text-2xl text-white mt-1"></p>
+          <p class="text-xs text-ink-500">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+          <p id="guest" class="font-serif text-2xl text-ink-900 mt-1"></p>
         </div>
         <button
           id="openBtn"
-          class="mt-8 px-9 py-3 rounded-full bg-sk-300 text-n9 font-semibold shadow-lg hover:bg-white hover:scale-105 transition"
+          class="mt-8 px-9 py-3 rounded-full bg-ac text-white font-semibold shadow-lg hover:bg-ac-dark hover:scale-105 transition"
         >
           Buka Undangan
         </button>
@@ -70,7 +75,7 @@
 
     <div
       id="pg"
-      class="hidden fixed top-0 h-1 bg-sk-300 z-[65]"
+      class="hidden fixed top-0 h-1 bg-ac z-[65]"
       style="transform: scaleX(0)"
     ></div>
     <aside
@@ -99,9 +104,9 @@
         style="opacity: 0"
       ></div>
       <div
-        class="absolute inset-0 bg-gradient-to-t from-n9/85 via-n9/10 to-n9/35"
+        class="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-cream-100 via-cream-100/70 to-transparent"
       ></div>
-      <div class="absolute bottom-16 left-14 text-white">
+      <div class="absolute bottom-16 left-14 text-ink-900">
         <p class="tracking-[.35em] text-xs">THE WEDDING OF</p>
         <h2 data-names class="font-serif text-6xl xl:text-7xl my-4"></h2>
         <p id="sideDate" class="tracking-widest text-sm"></p>
@@ -110,35 +115,35 @@
     <audio id="bgm" loop preload="auto"></audio>
     <button
       id="mb"
-      class="hidden fixed top-5 right-4 z-40 w-11 h-11 rounded-full bg-n9/80 backdrop-blur-md border border-sk-300/40 text-sk-200 text-lg shadow-lg grid place-items-center"
+      class="hidden fixed top-5 right-4 z-40 w-11 h-11 rounded-full bg-white/80 backdrop-blur-md border border-ac/40 text-ink-700 text-lg shadow-lg grid place-items-center"
       aria-label="Musik"
     ></button>
     <main id="app"></main>
     <nav
       id="nav"
-      class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 hidden max-w-[94vw] overflow-x-auto no-scrollbar rounded-full bg-n9/85 backdrop-blur-md border border-sk-300/30 px-2 py-1.5 text-[11px] sm:text-xs shadow-xl whitespace-nowrap"
+      class="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 hidden max-w-[94vw] overflow-x-auto no-scrollbar rounded-full bg-cream-50/90 backdrop-blur-md border border-ac/30 px-2 py-1.5 text-[11px] sm:text-xs shadow-xl whitespace-nowrap"
     ></nav>
     <div
       id="lb"
-      class="fixed inset-0 z-[70] hidden place-items-center bg-n9/95 select-none"
+      class="fixed inset-0 z-[70] hidden place-items-center bg-cream-50/95 select-none"
     >
       <button
         id="lbx"
-        class="absolute top-4 right-5 text-4xl text-white z-10"
+        class="absolute top-4 right-5 text-4xl text-ink-900 z-10"
         aria-label="Tutup"
       >
         &times;
       </button>
       <button
         id="lbp"
-        class="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white/15 text-white text-3xl leading-none hover:bg-white/30 transition"
+        class="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-ink-900/10 text-ink-900 text-3xl leading-none hover:bg-ink-900/20 transition"
         aria-label="Sebelumnya"
       >
         &#8249;
       </button>
       <button
         id="lbn"
-        class="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white/15 text-white text-3xl leading-none hover:bg-white/30 transition"
+        class="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-ink-900/10 text-ink-900 text-3xl leading-none hover:bg-ink-900/20 transition"
         aria-label="Berikutnya"
       >
         &#8250;

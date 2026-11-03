@@ -6,34 +6,36 @@ const U = (id, w, h) =>
 // Kosongkan ("" / []) bagian opsional bila tidak dipakai: live, giftAddress, gifts, story.
 const C = {
   bride: {
-    full: "Khoerunnisa", // nama + gelar
-    nick: "Icha", // nama panggilan (tampil di cover)
-    ig: "Khrnns_icha", // tanpa @
-    wa: "6281224235253", // format 62xxx
-    father: "Agus",
-    mother: "Kokom",
+    full: "Nadia Safira Rahma", // nama + gelar
+    nick: "Nadia", // nama panggilan (tampil di cover)
+    ig: "nadia.safira", // tanpa @
+    wa: "6281234567890", // format 62xxx
+    father: "Budi Santoso",
+    mother: "Siti Aminah",
     role: "Putri", // Putri / Putri pertama / Putri kedua ...
-    address: "Jl. Cigending Gg. Situ Indah 2 RT 03 RW 08, Ujungberung, Bandung",
+    address: "Jl. Melati No. 10 RT 01 RW 02, Kec. Contoh, Kota Contoh",
     // 2 foto = carousel otomatis (bergeser ke kanan). Isi 1 foto saja bila tidak ingin carousel.
     photos: [U("1565038930214-09566ed2149b", 900, 1200), U("1607357910286-1ff94ac13c24", 900, 1200)],
   },
   groom: {
-    full: "Asep Ridwan",
-    nick: "Ridwan",
-    ig: "ridwan_313",
-    wa: "6283170854327",
-    father: "Jajang Irawan",
-    mother: "Sumiati",
+    full: "Raka Pratama Wijaya",
+    nick: "Raka",
+    ig: "raka.pratama",
+    wa: "6281298765432",
+    father: "Hendra Wijaya",
+    mother: "Ratna Dewi",
     role: "Putra",
-    address: "Sumberejo RT 02 RW 03, Waway Karya, Lampung Timur",
+    address: "Jl. Kenanga No. 25 RT 03 RW 04, Kec. Contoh, Kota Contoh",
     // 2 foto = carousel otomatis (bergeser ke kiri).
     photos: [U("1545396047-0fd21ce522ba", 900, 1200), U("1596457221755-b96bc3a6df18", 900, 1200)],
   },
   date: "2026-12-12T07:30:00", // tanggal & jam mulai acara (Sabtu, 12 Desember 2026)
   // Identitas & teks undangan
   site: {
-    title: "The Wedding of Icha & Ridwan", // judul tab browser
-    copyright: "Copyright © 2026 Aisyae Digital Invitation",
+    title: "The Wedding of Nadia & Raka", // judul tab browser
+    copyright: "© 2026 Aisyae Digital Invitation — Dibuat dengan cinta.",
+    designer: { name: "saevitation.com", url: "https://saevitation.com/" }, // kredit desainer
+    instagram: { handle: "@saevitation", url: "https://www.instagram.com/saevitation" },
   },
   text: {
     greeting: "Assalamu'alaikum Wr. Wb.",
@@ -60,28 +62,28 @@ const C = {
       // photos: 2 foto = carousel otomatis; date (opsional) = tanggal khusus acara ini, kosong = tanggal utama
       photos: [U("1646325311277-0c35409fdd57", 1200, 800), U("1607357910286-1ff94ac13c24", 1200, 800)],
       time: "07.30 - 09.00 WIB",
-      place: "Gedung Brata Kartika",
-      addr: "Jl. Nagrog No.815, Pasirwangi, Kec. Ujung Berung, Kota Bandung, Jawa Barat 40618",
-      map: "https://maps.app.goo.gl/CNNyqXyhwyHs3FMG8?g_st=ac",
+      place: "Gedung Serbaguna Mawar",
+      addr: "Jl. Contoh Raya No. 123, Kec. Contoh, Kota Contoh, Provinsi Contoh 12345",
+      map: "https://maps.google.com/?q=Gedung+Serbaguna+Mawar",
     },
     {
       t: "Resepsi",
       photos: [U("1537633468298-d86f0c2d4173", 1200, 800), U("1695266392136-1805eef542ac", 1200, 800)],
       time: "10.00 - 15.00 WIB",
-      place: "Gedung Brata Kartika",
-      addr: "Jl. Nagrog No.815, Pasirwangi, Kec. Ujung Berung, Kota Bandung, Jawa Barat 40618",
-      map: "https://maps.app.goo.gl/CNNyqXyhwyHs3FMG8?g_st=ac",
+      place: "Gedung Serbaguna Mawar",
+      addr: "Jl. Contoh Raya No. 123, Kec. Contoh, Kota Contoh, Provinsi Contoh 12345",
+      map: "https://maps.google.com/?q=Gedung+Serbaguna+Mawar",
     },
   ],
   live: "", // link live streaming (kosongkan jika tidak ada)
   music: "sound/Calum-Scott-You-Are-The-Reason-Official-Video.mp3", // lagu latar: taruh file mp3 di folder sound/
   // alamat pengiriman kado (kosongkan {} jika tidak dipakai)
   giftAddress: {
-    name: "Icha",
-    addr: "Jl. Cigending Gg. Situ Indah 2 RT 03 RW 08 (Pabrik Tempe Afka)",
+    name: "Nadia",
+    addr: "Jl. Melati No. 10 RT 01 RW 02, Kec. Contoh, Kota Contoh",
   },
   // rekening amplop digital (boleh lebih dari satu; kosongkan [] jika tidak dipakai)
-  gifts: [{ bank: "BCA", no: "2831880815", name: "Khoerunnisa" }],
+  gifts: [{ bank: "BCA", no: "1234567890", name: "Nadia Safira Rahma" }],
   // galeri: disarankan 6 foto portrait agar ringan (tampil sebagai slider + thumbnail)
   gallery: [
     U("1607357910286-1ff94ac13c24", 800, 1100),
