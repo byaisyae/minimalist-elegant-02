@@ -1,8 +1,7 @@
 /* Data undangan (nama, tanggal, acara, rekening, galeri, cerita) — edit di file ini. */
 /* ============ DATA — edit di sini ============ */
-// Foto dummy pernikahan dari Unsplash (lisensi bebas pakai). Ganti dengan foto kostumer saat pesanan asli.
-const U = (id, w, h) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&q=75&w=${w}&h=${h}`;
+// Foto ada di folder img/ (tulis sebagai "img/nama-file.jpg"). Untuk pesanan baru, ganti file di img/ dan sesuaikan nama file di bawah.
+const I = (name) => `img/${name}.jpg`;
 // Kosongkan ("" / []) bagian opsional bila tidak dipakai: live, giftAddress, gifts, story.
 const C = {
   bride: {
@@ -15,10 +14,7 @@ const C = {
     role: "Putri", // Putri / Putri pertama / Putri kedua ...
     address: "Jl. Melati No. 10 RT 01 RW 02, Kec. Contoh, Kota Contoh",
     // 2 foto = carousel otomatis (bergeser ke kanan). Isi 1 foto saja bila tidak ingin carousel.
-    photos: [
-      U("1565038930214-09566ed2149b", 900, 1200),
-      U("1607357910286-1ff94ac13c24", 900, 1200),
-    ],
+    photos: [I("rafie"), I("IMG_7964")],
   },
   groom: {
     full: "Raka Pratama Wijaya",
@@ -30,16 +26,13 @@ const C = {
     role: "Putra",
     address: "Jl. Kenanga No. 25 RT 03 RW 04, Kec. Contoh, Kota Contoh",
     // 2 foto = carousel otomatis (bergeser ke kiri).
-    photos: [
-      U("1545396047-0fd21ce522ba", 900, 1200),
-      U("1596457221755-b96bc3a6df18", 900, 1200),
-    ],
+    photos: [I("roma"), I("IMG_7473")],
   },
   date: "2028-12-12T07:30:00", // tanggal & jam mulai acara (Sabtu, 12 Desember 2026)
   // Identitas & teks undangan
   site: {
     title: "The Wedding of Nadia & Raka", // judul tab browser
-    copyright: "© 2026 Aisyae Digital Invitation — Dibuat dengan cinta.",
+    copyright: "© 2026 Aisyae Digital Invitation",
     designer: { name: "saevitation.com", url: "https://saevitation.com/" }, // kredit desainer
     instagram: {
       handle: "@saevitation",
@@ -57,22 +50,19 @@ const C = {
       "Merupakan sebuah kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Terima kasih.",
   },
   // URL Web App Google Apps Script (berakhiran /exec) untuk RSVP & ucapan. Kosongkan = disimpan di browser saja (hanya untuk uji coba)
-  rsvp: "",
+  rsvp: "https://script.google.com/macros/s/AKfycbyVJ5ra4Cm0C0KAatcYpzuRjwtBxk9cBWauW_HI9URO2Uyi8VqcqgDajZO70wY-Qvbg/exec",
   // foto latar tiap bagian
   bg: {
-    cover: U("1519741497674-611481863552", 1200, 900),
-    quote: U("1517456215183-9a2c3a748d0c", 1200, 900),
-    foot: U("1502955422409-06e43fd3eff3", 1200, 900),
-    date: U("1556302482-70b6e670e6b7", 1200, 900),
+    cover: I("IMG_8202"),
+    quote: I("IMG_8202sdsdsd-scaled"),
+    foot: I("IMG_7760"),
+    date: I("IMG_8070"),
   },
   events: [
     {
       t: "Akad Nikah",
       // photos: 2 foto = carousel otomatis; date (opsional) = tanggal khusus acara ini, kosong = tanggal utama
-      photos: [
-        U("1646325311277-0c35409fdd57", 1200, 800),
-        U("1607357910286-1ff94ac13c24", 1200, 800),
-      ],
+      photos: [I("IMG_7944"), I("IMG_7818")],
       time: "07.30 - 09.00 WIB",
       place: "Gedung Serbaguna Mawar",
       addr: "Jl. Contoh Raya No. 123, Kec. Contoh, Kota Contoh, Provinsi Contoh 12345",
@@ -80,10 +70,7 @@ const C = {
     },
     {
       t: "Resepsi",
-      photos: [
-        U("1537633468298-d86f0c2d4173", 1200, 800),
-        U("1695266392136-1805eef542ac", 1200, 800),
-      ],
+      photos: [I("IMG_7625"), I("IMG_8137")],
       time: "10.00 - 15.00 WIB",
       place: "Gedung Serbaguna Mawar",
       addr: "Jl. Contoh Raya No. 123, Kec. Contoh, Kota Contoh, Provinsi Contoh 12345",
@@ -99,21 +86,31 @@ const C = {
   },
   // rekening amplop digital (boleh lebih dari satu; kosongkan [] jika tidak dipakai)
   gifts: [{ bank: "BCA", no: "1234567890", name: "Nadia Safira Rahma" }],
-  // galeri: disarankan 6 foto portrait agar ringan (tampil sebagai slider + thumbnail)
+  // galeri: slider + thumbnail (boleh berapa saja; foto lebih banyak = halaman lebih berat)
   gallery: [
-    U("1607357910286-1ff94ac13c24", 800, 1100),
-    U("1596457221755-b96bc3a6df18", 800, 1100),
-    U("1624067056935-593eb6595294", 800, 1100),
-    U("1535185384036-28bbc8035f28", 800, 1100),
-    U("1556499696-0ba753b9ad02", 800, 1100),
-    U("1684244276932-6ae853774c4d", 800, 1100),
+    I("IMG_8202"),
+    I("IMG_7964"),
+    I("IMG_7947"),
+    I("IMG_7760"),
+    I("IMG_8474"),
+    I("IMG_8070"),
+    I("IMG_7944"),
+    I("IMG_7473"),
+    I("IMG_8258"),
+    I("IMG_7640"),
+    I("IMG_8407"),
+    I("rafie"),
+    I("IMG_8137"),
+    I("roma"),
+    I("IMG_7818"),
+    I("IMG_7625"),
+    I("IMG_8202sdsdsd-scaled"),
+    I("IMG_7944-768x512"),
+    I("IMG_7944-300x200"),
   ],
   // cerita (kosongkan [] jika tidak dipakai)
   // 2 foto cerita (carousel otomatis bergeser ke bawah)
-  storyPhotos: [
-    U("1519741497674-611481863552", 1200, 800),
-    U("1517456215183-9a2c3a748d0c", 1200, 800),
-  ],
+  storyPhotos: [I("IMG_8258"), I("IMG_8474")],
   // contoh isi (hapus tanda // di depan, lalu isi dengan cerita asli):
   // story: [
   //   { d: "09 September 2016", t: "Awal Bertemu", p: "Tulis cerita singkat di sini." },

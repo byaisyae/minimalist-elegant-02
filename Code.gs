@@ -128,9 +128,14 @@ function doGet() {
     if (rl > 1) {
       const s2 = Math.max(2, rl - MAX_BALASAN + 1);
       replies = rs
-        .getRange(s2, 2, rl - s2 + 1, 3)
+        .getRange(s2, 1, rl - s2 + 1, 4)
         .getValues()
-        .map((r) => ({ w: r[0], n: r[1], m: r[2] })); // ID Ucapan, Nama, Balasan
+        .map((r) => ({
+          t: r[0] instanceof Date ? r[0].getTime() : 0, // Waktu
+          w: r[1], // ID Ucapan
+          n: r[2], // Nama
+          m: r[3], // Balasan
+        }));
     }
     return json_({ ok: true, wishes: wishes, replies: replies });
   } catch (err) {
